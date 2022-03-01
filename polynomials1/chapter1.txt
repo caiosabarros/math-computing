@@ -1,0 +1,33 @@
+# Definition:
+
+## Definition 2.1
+A single variable polynomial with real coefficients is a function f that takes a real number as input, produces a real number as output, and has the form of 
+f(x) = a0 + a1x+ ... + anx^n,
+where all ai's are real numbers. The ai are called coefficients of f. The degree of the polynomial is the integer n.
+
+The f(x) = 0 is the zero polynomial. It as, by convection, degree equals to -1.
+Convection means that it is done that way so that computation can be done in edge cases - cases in which the formal math definition of something lets the case to be on the edge in between considered or not as a true example in the definition. 0! = 1 is an edge case. 
+
+Well, the function:
+def poly(x):
+	return x**2
+is a polynomial. The f: R->R means that a function (poly in this case) has a domain the Reals, a codomain in the Reals and the range of values the codomain covers is x^2. To be more simple, the domain and codomain explicit the type (int, boolean, etc) an I/O can take and the range are the specific values.
+
+## Definition 2.2
+
+For any integer n >= 0, and any list of n +1 points (x1,y1),...,(xi,yi) in R2 with the x's being not equal and increasingly growning, there exists a unique polynomial of degree at most n such that p(xi) = yi for all i
+
+This seems lots of information at first,  but take n = 1. It is just saying that if we get two different points on the R2 plane, there will be a polynomial that passes through those two points and the degree of that polynomial is at most 1.Bascially, there will always be a polynomial function that passes through two points on the place. And so on for n > 3.
+
+Ok, so we spent a good amount of time writing a math proof for definition 2.2. The proof was done in two steps according to the definition. We prove that there is a polynomial - as stated - and we prove it is unique - as stated. For uniqueness we use another theorem that states:
+
+## Definition 2.3:
+The zero polynomial  (p(x)=0 for any real x) is the only polynomial in R of degree at most n that has more than n roots. 
+
+As the author encourages, I can define it in a way I will understand: all polynomials, expect the zero polynomial, all will not have more than n roots.
+
+## Thing about the girls:
+
+The situation occurs like this: I have a secret and I distribute a tip to get the secret to 7 different people. The thing is that I want any four of them to be able to find out the secret if they combine their tips. But if they're in groups less than 4, they cant get the secret in any manner! How do I do this? Polynomials (THAT'S OUTSTADING)
+
+Basically, I give to all of the seven people a point in a graph. My secret will be the independent term of the polynomial. The other coefficients will be random. The polynomial is a three degree - thus If I have four points, I can find which polynomial it is due to Definition 2.2. 

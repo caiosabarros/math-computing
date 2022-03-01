@@ -1,0 +1,56 @@
+Exercises:
+
+2.1:
+1. If degree d of g = 2 and d of f is equal to 1, then the product polynomial f.g has degree three.
+
+Answer: The product f and g will have the leading term being x^2 * x ^1 = x^3. Any other term in the prouct polynomial will be in the form x^n*x^m where m+n < 3. So, the degree is equal to 3.
+
+2. Generalize proving that d(f) = m  and d(g)=n, then d(f.g)=m+n.
+
+Answer: All of the terms of the product will be in the form x^k*x^i, where k maximum = m and i maximum = n. The degree of the polynomial f.g is then m+n.
+
+3. Does the above fact work when the zero polynomial is one of the polynomiasl (noticing the degree of the zero polynomial is equal to -1.)? Can you think of a better convertion?
+
+Answer: It does not work. A better convenction is to set a boundary on m and n, so that m,n >=0.
+
+4. Prove that there is an input for which two polynomial formulas of different degrees will give a different output.
+
+Answer: 
+Let's prove it for m = 3 and n = 2. The proof will be exactly the same for any m and n, m != n. For f of degree m, there are m points for which f(m) = 0. For g, there are n points, for which g(n) = 0. So, there are m - n points for which g(i) != 0 where i is in the set of those  m - n points. Proved. 
+
+2.2: Write down examples for the following definitions
+1. Euler's phi function. Why n must be > 1?
+Example:
+f(12) = 1, 5, 7, 11 is the set of numbers that are relatively prime to 12. 
+n must be > 1, because if n < 0, f(-a) = f(a). If n = 0, there are no numbers divisible by 0. I don't know for f(1).
+
+2. Monic polynomial:
+x ^ 2  + 234983343 x -11029102902129102
+
+3. Factor of a polynomial 
+(x + 1)(x^2) = x^3 + x^2
+
+4.
+Relatively Prime polynomials:
+(x-1)(x^2 + 1) and polynomial from 3 above.
+Irreductible polynomials:
+x, x+1,x^2 + 1, x^n + 1, x^2 + x + 1...
+The gdc polynomials:
+take f = x^3 + x^6, and g = x^4 + x^5, then gdc(g,f) = x^3.
+
+2.3. Verify that euler's theorem is true:
+Examples:
+2,3 => 2 ^ (2) = 1 mod 3.
+3,4 => 3 ^ (2) = 1 mod 4
+2,7 => 2 ^ (6) = 1 mod 7
+
+2.5. Algebraic or transcedental:
+is (1 + sqrt(5))/2 algebraic? Yes, take a polynomial of degree equal to 2, with that root and the root (1 - sqrt(5))/2.
+sqrt(2) + sqrt(3): dont know, but my bet is that it is transcendental.
+
+2.7:
+Proving the productory P formula:
+If all roots of f in reals, then f = an(x-r1)...(x-rn). Then f(0) = an * -r1 * -r2 *...* -rn = an * (-1)^n * P. But notice that f(0) is equalt ot the independent term. P being the productory of the roots, we have then the stated result.
+
+Proving the sum S:
+Example for a(x-r1)(x-r2). We'll have then: a(x^2 -(r1+r2)x + r1*r2). For third degree, we have a(x-r1)(x-r2)(x-r3). The sum will be in the term next to the leading term. Indeed: -r1*x*x*+-r2*x*x+-r3*x*x = -x^2(S). So, for a polynomial of degree n, take the first root, multiply by all n-1 x's remaining. Take the r2 and do the same. the S will be the coefficient of x ^ (n - 1). By we got divide it by the coeficient of the leading term that is multipling everyone in the factorization fot the polynomial 
