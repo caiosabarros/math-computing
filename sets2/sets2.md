@@ -32,4 +32,29 @@ Another way to see it is that the inverse of f for an element b is non-empty. Th
 13. Inverse function: For bijective functions it is important to define the inverse function. All bijective functions will have inverse. Finding their inverse though cannot be an easy task - as experienced in linear algebra and functions like sha256. Inverse function: The domain of the function f is the codomain of its inverse and the domain of its inverse is the codomain of f. So, g being the inverse, g(f(a)=b) = a and f(g(b)) = b.
 14. Fact: inverses are unique. The proof is done by showing that the if there were two inverse functions, they'd produce the same output for the same input all the time. So, they must be the same.
 
+Notes from the chapter:
+
+Three strategies for proofs:
+
+Clever Bijections:
+It is used usually when trying to count something. But sometimes counting is hard, so we find another set that much easier to count that will reveal the information about the set we are trying to count. It is basically, count on something similar, but easier. The bijection term comes in this similar approach - both sets being biject to each other will have the same count, so we'll actually have found the count for the first one too!
+Example:
+Count how many games are played when there is single-elimination in a tournament of n participants.
+
+Well, if n = 4, then 4/2 + 4/4 = 3 games played. If n = 5, then 4/2 + 4/4 + 1 = 4 games. We could prove this by induction having the hapythosis that for a tournament of n, there will be n-1 games.
+
+But, let's use the clever bijection. Just notice that the each game has a loser.
+At the end of the tournament there will be n - 1 losers. So, n-1 games need to be played! Clever bijection!
+
+Ok, so, where is the bijection in here? Formally stated, it is instead of associating a function f from the set P of participants to the set of G games, we associate the set of L losers to the set of G games. The thing is that L is subset of P (it has all participants in it minus the winner). And L -> G is surjective. 
+There will always be a loser for a game. But P -> G is non-surjective. Anyways, we changed the reference of the set we're trying to count
+
+Induction:
+Prove that f(n) is true for a small n. Assumes that f(n) is true for a random n.
+Prove f(n+1) is true having the hypotesis that f(n) is true. So, if small n = 3,
+then assume for any n, and prove for n + 1. After proved, then it is true for n = 3, n = 4 (hypostesis), and  n = 5 (proved). The same for 6,7,8,9,... all n's.
+
+Contraditory:
+Assumes it is a contradition, find and object and go foward with that object till comes to somethinhg non-sense.
+Example: there always will be two people in a congragation that will have the same amount of FRIENDS (person knows friend and friend knows person). Assume there will be not, so there will be n people at the party, each knowing an amount of people that is in the range 0, n-1 inclusive. There are then n possibilities for the amount of people a person is friend to. There is also n people in the congregation. So, there will be one person who knows n-1 people and another who knows 0 people. But the person who is friend of n - 1 is friend of everyone. The person with 0 is friend of nobody. Contradition!
 
