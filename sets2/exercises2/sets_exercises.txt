@@ -1,7 +1,7 @@
 4.1. Write down examples for the following definitions. 
 A set A (finite or infinite) is called countable if it is empty, or if there is a surjection N → A. 
 Example: A = N is an example of such surjection if f(x) = x, A being infinite.
-
+Also, more well-defined, a coutable set is a set in which all its elements can be paired with a natural number. Basically, they're what the word means: coutable. Can we count the rational numbers? Yes! It is a coutable set, even though it is infinite, because each rational can be mapped to a natural number if we follow a correct algorithm to make that map to number. Youtube has examples.
 
 The power set of a set A,denoted 2^A, is the set of all subsets of A. 
 Example: A = {1,2,3} means that 2^A = [{1},{2},{3},{1,2}...,{1,2,3}, empty]
